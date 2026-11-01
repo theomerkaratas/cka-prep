@@ -9,6 +9,7 @@ site/
 website/site/
 
 # OS and IDE files
+*.DS_Store
 .DS_Store
 .vscode/
 .idea/
