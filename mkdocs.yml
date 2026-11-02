@@ -7,6 +7,7 @@ repo_url: https://github.com/theomerkaratas/cka-prep
 theme:
   name: material
   language: en
+  favicon: assets/images/kubernetes-favicon.svg
   palette:
     # Palette toggle for light mode
     - scheme: default
