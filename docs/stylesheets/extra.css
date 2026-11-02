@@ -5,3 +5,7 @@ html[data-md-color-scheme="slate"] {
   --md-primary-fg-color--dark: #2456BD;
   --md-accent-fg-color: #326CE5;
 }
+
+.md-tabs__link {
+  font-weight: 700;
+}
