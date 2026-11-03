@@ -187,8 +187,10 @@ nav:
         - CoreDNS CKA Scenarios: "8. Networking/15.2. coredns in k8s cka scenarios.md"
         - Ingress: "8. Networking/16.1. Ingress.md"
         - Ingress CKA Scenarios: "8. Networking/16.2. ingress cka scenarios.md"
+        - Ingress curl Verification: "8. Networking/16.3. ingress curl verification.md"
         - Gateway API: "8. Networking/17.1. Gateway API.md"
         - Gateway API CKA Scenarios: "8. Networking/17.2. gateway api cka scenarios.md"
+        - Ingress vs Gateway API: "8. Networking/17.3. Ingress vs Gateway API.md"
   - 9. Design & Install:
         - Designing a Cluster: "9. Desing and Install K8S Cluster/1. Designing a K8S Cluster.md"
         - Choosing Infrastructure: "9. Desing and Install K8S Cluster/2. Choosing K8S Infra.md"
