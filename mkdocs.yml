@@ -195,7 +195,6 @@ nav:
         - Configuring HA: "9. Kubernetes Cluster Design/1. Configuring HA.md"
         - etcd in HA: "9. Kubernetes Cluster Design/2. etcd in HA.md"
         - Introduction to Cluster Setup with kubeadm: "9. Kubernetes Cluster Design/3. Introduction to Cluster Setup with kubeadm.md"
-        - Provision VMs with Vagrant: "9. Kubernetes Cluster Design/4. Provision VMs with Vagrant.md"
   - 10. Helm:
         - Intro: "10. Helm/1. Intro.md"
         - Installation & Configuration: "10. Helm/2. Installation and Configuration.md"
