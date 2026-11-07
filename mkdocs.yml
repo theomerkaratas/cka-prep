@@ -198,10 +198,10 @@ nav:
   - 10. Helm:
         - Intro: "10. Helm/1. Intro.md"
         - Installation & Configuration: "10. Helm/2. Installation and Configuration.md"
-        - Quick Note: "10. Helm/3. Quick note.md"
+        - Helm 2 vs Helm 3: "10. Helm/3. Helm 2 vs Helm 3.md"
         - Helm Components: "10. Helm/4. Helm Components.md"
         - Helm Charts: "10. Helm/5. Helm Charts.md"
-        - Helm Basics: "10. Helm/6. Helm - Basics.md"
+        - Helm CLI and Commands: "10. Helm/6. Helm CLI and Commands.md"
         - Customizing Parameters: "10. Helm/7. Customizing Chart Parameters.md"
         - Lifecycle Management: "10. Helm/8. Lifecycle Management with Helm.md"
   - 11. Kustomize:
