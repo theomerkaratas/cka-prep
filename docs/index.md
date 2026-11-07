@@ -22,19 +22,20 @@ The Certified Kubernetes Administrator (CKA) exam tests practical, performance-b
 
 This knowledge base is organized sequentially into structured, modular topics:
 
-1. **[Core Components](1.%20Core%20Components/1.%20etcd.md):** `etcd`, `kube-apiserver`, `kube-controller-manager`, `kube-scheduler`, `kubelet`, `kube-proxy`, and essential CLI commands.
-2. **[Scheduling](2.%20Scheduling/1.%20Manuel%20Scheduling.md):** Manual scheduling, labels & selectors, taints & tolerations, node affinity, static pods, and multiple schedulers.
-3. **[Logging & Monitoring](3.%20Logging%20&%20Monitoring/1.%20Monitoring%20Cluster%20Components.md):** Metrics Server (`cAdvisor`), `kubectl top`, and container log management.
-4. **[Application Lifecycle Management](4.%20Application%20lifecycle%20Management/1.%20Rolling%20Updates%20and%20Rollbacks.md):** Rolling updates, rollbacks, commands/args, ConfigMaps, Secrets, init containers, and autoscaling (HPA/VPA).
-5. **[Cluster Maintenance](5.%20Cluster%20Maintenance/1.%20OS%20Upgrade.md):** Node drain/cordon, OS upgrades, cluster version upgrades with `kubeadm`, and `etcd` backup & restore.
-6. **[Security](6.%20Security/1.%20Security%20Primitives.md):** Authentication, TLS/PKI, Certificates API, Kubeconfig, Authorization (Node, RBAC), ServiceAccounts, SecurityContexts, and NetworkPolicies.
-7. **[Storage](7.%20Storage/1.1.%20Intro.md):** Storage drivers, CSI, Volumes, PVs, PVCs, Reclaim policies, and StorageClasses.
-8. **[Networking](8.%20Networking/0.%20Network%20Layers.md):** Switching/routing, Linux network namespaces, CNI addons, IPAM, Service networking, CoreDNS, Ingress, and Gateway API.
-9. **[Design & Install](9.%20Desing%20and%20Install%20K8S Cluster/1.%20Designing%20a%20K8S%20Cluster.md):** High availability planning, infrastructure sizing, and multi-master etcd.
-10. **[Install with kubeadm](10.%20Install%20with%20kubeadm/1.%20Intro.md):** Bootstrap clusters and local Vagrant testing environments.
-11. **[Helm](11.%20Helm/1.%20Intro.md):** Package management, chart customization, and lifecycle releases.
-12. **[Kustomize](12.%20kustomize/1.%20Intro.md):** Declarative template-free configuration management, overlays, and transformers.
-13. **[Troubleshooting](13.%20Troubleshooting/1.%20Intro.md):** Diagnostic methodology for control plane, workers, applications, and networks.
+1. **[Core Components](core-components/etcd.md):** `etcd`, `kube-apiserver`, `kube-controller-manager`, `kube-scheduler`, `kubelet`, `kube-proxy`, and essential CLI commands.
+2. **[Scheduling](scheduling/manuel-scheduling.md):** Manual scheduling, labels & selectors, taints & tolerations, node affinity, static pods, and multiple schedulers.
+3. **[Logging & Monitoring](logging-monitoring/monitoring-cluster-components.md):** Metrics Server (`cAdvisor`), `kubectl top`, and container log management.
+4. **[Application Lifecycle Management](alm/rolling-updates-and-rollbacks.md):** Rolling updates, rollbacks, commands/args, ConfigMaps, Secrets, init containers, and autoscaling (HPA/VPA).
+5. **[Cluster Maintenance](cluster-maintenance/os-upgrade.md):** Node drain/cordon, OS upgrades, cluster version upgrades with `kubeadm`, and `etcd` backup & restore.
+6. **[Security](security/security-primitives.md):** Authentication, TLS/PKI, Certificates API, Kubeconfig, Authorization (Node, RBAC), ServiceAccounts, SecurityContexts, and NetworkPolicies.
+7. **[Storage](storage/intro.md):** Storage drivers, CSI, Volumes, PVs, PVCs, Reclaim policies, and StorageClasses.
+8. **[Networking](networking/network-layers.md):** Switching/routing, Linux network namespaces, CNI addons, IPAM, Service networking, CoreDNS, Ingress, and Gateway API.
+9. **[Cluster Design](cluster-design/configuring-ha.md):** High availability planning, infrastructure sizing, and multi-master etcd.
+10. **[Helm](helm/intro.md):** Package management, chart customization, and lifecycle releases.
+11. **[Kustomize](kustomize/intro.md):** Declarative template-free configuration management, overlays, and transformers.
+12. **[Troubleshooting](troubleshooting/intro.md):** Diagnostic methodology for control plane, workers, applications, and networks.
+13. **[Other Topics](other-topics/intro.md):** Miscellaneous topics and references.
+14. **[Extra](extra/resources.md):** Additional resources and study materials.
 
 ---
 
