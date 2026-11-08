@@ -45,6 +45,7 @@ This knowledge base is organized sequentially into structured, modular topics:
   export do="--dry-run=client -o yaml"
   ```
 - **Kubernetes Documentation:** [Kubernetes Documentation](https://kubernetes.io/)
+- **Kubernetes Tasks:** [Tasks](https://kubernetes.io/docs/tasks/)
 - **More CKA articles:** [Medium CKA tag](https://medium.com/tag/cka)
 - **Documentation Bookmarks:** Get familiar with standard YAML examples on [kubernetes.io/docs](https://kubernetes.io/docs/).
 - **Explain Over Search:** When in doubt about manifest structure, use `kubectl explain <resource>.<field>` instead of browsing the web.

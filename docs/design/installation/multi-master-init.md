@@ -9,12 +9,16 @@ Use the load balancer address as the control plane endpoint. The `--upload-certs
 ```bash
 sudo kubeadm init \
   --control-plane-endpoint "<LB_IP_OR_DNS>:6443" \
+  --apiserver-cert-extra-sans="<LB_IP_OR_DNS>" \
   --upload-certs \
-  --pod-network-cidr=192.168.0.0/16
+  --pod-network-cidr=192.168.0.0/16 \
+  --service-cidr=10.96.0.0/12
 ```
 
 - `--control-plane-endpoint` makes the cluster use the load balancer address instead of `master1`. Turning a cluster created without this flag into an HA cluster is not supported by kubeadm, so set it from the start.
+- `--apiserver-cert-extra-sans` adds the load balancer IP address or DNS name to the API server certificate's Subject Alternative Names (SANs).
 - `--upload-certs` lets the other masters join without copying certificate files by hand.
+- `--service-cidr` sets the range used for Service IP addresses. `10.96.0.0/12` is the default; if you choose a different range, ensure it does not overlap with the node or Pod network ranges.
 
 ## Save the join values
 
