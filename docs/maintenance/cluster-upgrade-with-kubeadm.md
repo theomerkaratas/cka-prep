@@ -1,4 +1,10 @@
-- we can see the versions with running `kubectl get nodes`
+# Cluster Upgrade with kubeadm
+
+Official guide: [Upgrade a kubeadm cluster](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/).
+
+## Checking Versions
+
+Run `kubectl get nodes` to see the version of each node:
 
 ```text
 $ kubectl get nodes
@@ -7,17 +13,24 @@ controlplane   Ready    control-plane   14m   v1.33.0
 node01         Ready    <none>          13m   v1.33.0
 ```
 
-`etcd` cluster and `CoreDNS` has own version, but k8s components has same version. but components can be at different versions. all components talk with api-server. so none of the other components should ever be at a version higher that the kube-api server.
+## Version Skew Rules
 
-if our cluster in cloud with their k8s service, they usually give us a upgrade option easily. 
-for ex `gcp`:
-![[Screenshot 2026-10-22 at 9.22.37 PM.png|419]]
-recommended order is first masters then workers
+- `etcd` and `CoreDNS` have their own versions. The Kubernetes components share one version, but they do not all have to run the same version.
+- All components talk to the API server, so none of them should run a version higher than the kube-apiserver.
+- The recommended order is control plane (master) nodes first, then worker nodes.
 
-if we setup our cluster with `kubeadm`, `kubeadm` has commands like below:
+## Upgrade Options
 
-## For master nodes:
-```sh
+- **Managed Kubernetes (cloud):** the provider usually offers an upgrade option directly. For example, on GCP:
+  _(Screenshot: `Screenshot 2026-10-22 at 9.22.37 PM.png`, GCP upgrade option)_
+- **kubeadm:** the cluster has its own upgrade commands, shown below.
+- **Hard way:** if the cluster was set up manually, every component has to be upgraded by hand.
+
+## Upgrading with kubeadm
+
+### Master (Control Plane) Nodes
+
+```bash
 # Check which package versions are currently visible to apt:
 apt-cache madison kubeadm
 
@@ -56,12 +69,14 @@ sudo apt-mark hold kubelet kubectl
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 
-# 7. Uncordon the Control Plane node
+# 7. Uncordon the control plane node
 kubectl uncordon <node-name>
 ```
-## For worker nodes:
-```sh
-# Drain the Worker node
+
+### Worker Nodes
+
+```bash
+# Drain the worker node
 kubectl drain node-name --ignore-daemonsets --delete-emptydir-data
 
 # Unhold package, install new version, and hold again
@@ -71,9 +86,9 @@ sudo apt-mark hold kubeadm
 
 # Upgrade local node configuration
 sudo kubeadm upgrade node
-# On worker nodes, run `upgrade node` instead of `upgrade apply`. This updates the local kubelet configuration.
+# On worker nodes, run `upgrade node` instead of `upgrade apply`. This updates the local kubelet configuration.
 
-# Upgrade `kubelet` and `kubectl`, then restart `kubelet`
+# Upgrade `kubelet` and `kubectl`, then restart `kubelet`
 sudo apt-mark unhold kubelet kubectl
 sudo apt-get update && sudo apt-get install -y kubelet=1.31.0-1.1 kubectl=1.31.0-1.1
 sudo apt-mark hold kubelet kubectl
@@ -82,9 +97,13 @@ sudo apt-mark hold kubelet kubectl
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 
-# Uncordon the Control Plane node
+# Uncordon the worker node
 kubectl uncordon node-name
 ```
+
+## Example: `kubeadm upgrade plan` Output
+
+Output from an older release, kept as a reference:
 
 ```text
 $ kubeadm upgrade plan
@@ -117,8 +136,6 @@ You can now apply the upgrade by executing the following command:
 
 Note: Before you can perform this upgrade, you have to update kubeadm to v1.13.4.
 ```
-
-if we setup our cluster in hard way, we should setup by ourselves
 
 ## Further Reading
 - [`kubeadm upgrade` command reference](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-upgrade/)

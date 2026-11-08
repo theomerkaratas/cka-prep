@@ -128,7 +128,7 @@ nav:
               - VPA: "alm/autoscaling/vpa.md"
   - Maintenance:
         - OS Upgrade: "maintenance/os-upgrade.md"
-        - Cluster Upgrade Intro: "maintenance/cluster-upgrade-intro.md"
+        - Cluster Upgrade with kubeadm: "maintenance/cluster-upgrade-with-kubeadm.md"
         - Backup and Restore Methods: "maintenance/backup-and-restore-methods.md"
         - ETCD with kubeadm: "maintenance/etcd-with-kubeadm.md"
   - Security:
