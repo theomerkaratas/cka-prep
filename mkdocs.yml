@@ -10,18 +10,18 @@ theme:
   language: en
   favicon: assets/images/kubernetes-favicon.svg
   palette:
-    - scheme: default
-      primary: blue
-      accent: blue
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
     - scheme: slate
       primary: blue
       accent: blue
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
   font:
     text: Roboto
     code: Roboto Mono
@@ -290,12 +290,11 @@ nav:
               - Exam Workflow: "troubleshooting/worker-plane/exam-workflow.md"
         - Network Failure:
               - Overview: "troubleshooting/network/intro.md"
-              - "Step 1: Check the Pods": "troubleshooting/network/pods.md"
-              - "Step 2: Reach the Pods Directly": "troubleshooting/network/direct-pod-access.md"
-              - "Step 3: Service and Endpoints": "troubleshooting/network/service-endpoints.md"
-              - "Step 4: CoreDNS": "troubleshooting/network/coredns.md"
-              - "Step 5: DNS Resolution": "troubleshooting/network/dns-resolution.md"
-              - "Step 6: CNI Plugin": "troubleshooting/network/cni.md"
-              - "Step 7: kube-proxy": "troubleshooting/network/kube-proxy.md"
+              - Check the Pods: "troubleshooting/network/pods.md"
+              - Reach the Pods Directly: "troubleshooting/network/direct-pod-access.md"
+              - Service and Endpoints: "troubleshooting/network/service-endpoints.md"
+              - CoreDNS: "troubleshooting/network/coredns.md"
+              - DNS Resolution: "troubleshooting/network/dns-resolution.md"
+              - CNI Plugin: "troubleshooting/network/cni.md"
+              - kube-proxy: "troubleshooting/network/kube-proxy.md"
               - Exam Workflow: "troubleshooting/network/exam-workflow.md"
-        
