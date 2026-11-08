@@ -211,9 +211,24 @@ nav:
               - Gateway API CKA Scenarios: "networking/ingress-and-gateway-api/gateway-api-cka-scenarios.md"
               - Ingress vs Gateway API: "networking/ingress-and-gateway-api/ingress-vs-gateway-api.md"
   - Design:
-        - Configuring HA: "design/configuring-ha.md"
-        - etcd in HA: "design/etcd-in-ha.md"
-        - Introduction to Cluster Setup with kubeadm: "design/introduction-to-cluster-setup-with-kubeadm.md"
+        - Installation:
+              - Intro: "design/installation/intro.md"
+              - Prerequisites: "design/installation/prerequisites.md"
+              - Container Runtime: "design/installation/container-runtime.md"
+              - kubeadm, kubelet, kubectl: "design/installation/kubeadm-kubelet-kubectl.md"
+              - CNI Add-on: "design/installation/cni.md"
+              - Join Worker Nodes: "design/installation/join-workers.md"
+              - Single Master:
+                    - Initialize the Master: "design/installation/single-master-init.md"
+                    - Verify the Cluster: "design/installation/single-master-verify.md"
+        - HA:
+              - Multiple Masters:
+                    - Load Balancer: "design/installation/multi-master-load-balancer.md"
+                    - Initialize the First Master: "design/installation/multi-master-init.md"
+                    - Join the Other Masters: "design/installation/multi-master-join-control-planes.md"
+                    - Verify the HA Cluster: "design/installation/multi-master-verify.md"
+              - Configuring HA: "design/ha/configuring-ha.md"
+              - etcd in HA: "design/ha/etcd-in-ha.md"
   - Helm:
         - Intro: "helm/intro.md"
         - Installation & Configuration: "helm/installation-and-configuration.md"
