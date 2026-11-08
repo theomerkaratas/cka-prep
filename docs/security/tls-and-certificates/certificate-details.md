@@ -17,6 +17,40 @@ To perform a health check on cluster certificates, start by identifying the file
   kubeadm certs check-expiration
   ```
 
+Example command and output:
+
+```bash
+openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text -noout
+```
+
+```text
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1234567890 (0x499602d2)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=kubernetes
+        Validity
+            Not Before: Feb 11 05:39:19 2019 GMT
+            Not After : Feb 11 05:39:20 2020 GMT
+        Subject: CN=kube-apiserver
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:af:34:62:19:8b:75:c0:4e:21:dd:83:a6:5c:09:
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage:
+                TLS Web Server Authentication
+            X509v3 Subject Alternative Name:
+                DNS:master, DNS:kubernetes, DNS:kubernetes.default,
+                DNS:kubernetes.default.svc, DNS:kubernetes.default.svc.cluster.local,
+                IP Address:10.96.0.1, IP Address:192.168.1.10
+```
+
 ---
 
 ## Kubernetes PKI Certificate Map
