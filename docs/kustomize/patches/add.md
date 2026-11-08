@@ -154,10 +154,42 @@ spec:
 
 ---
 
+## Add an Environment Variable
+
+In the example Deployment, the first container is `api` (index `0`). If it does not have an `env` field yet, add the field with a list value:
+
+```yaml
+patches:
+- target:
+    kind: Deployment
+    name: api-deployment
+  patch: |-
+    - op: add
+      path: /spec/template/spec/containers/0/env
+      value:
+        - name: LOG_LEVEL
+          value: info
+```
+
+If `env` already exists as a list, append the variable to it instead:
+
+```yaml
+- op: add
+  path: /spec/template/spec/containers/0/env/-
+  value:
+    name: LOG_LEVEL
+    value: info
+```
+
+The `-` appends to the end of the list. Replace `0` with the target container's list index when patching a different container.
+
+---
+
 ## CKA Quick Reference
 
 - Dictionary `add`: the path ends with the new key name.
 - List `add` (JSON 6902): `/containers/-` appends to the end.
+- Add an environment variable under `/containers/<index>/env`; use `/env/-` if that list already exists.
 - List `add` (strategic merge): a new `name` adds an item, placed first.
 - Check your work with `kubectl kustomize <dir>`.
 - Next: [Update](update.md), [Remove](remove.md).

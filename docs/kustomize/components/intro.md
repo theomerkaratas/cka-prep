@@ -95,10 +95,29 @@ spec:
 
 ---
 
+## Add a Component to an Overlay
+
+See [Component kustomization.yaml](kustomization-yaml.md) for how to declare a component's resources and patches.
+
+An overlay enables the component under `components:`:
+```yaml
+# k8s/overlays/dev/kustomization.yaml
+resources:
+- ../../base
+components:
+- ../../components/auth
+```
+
+Build the overlay to render the base together with the component:
+
+```bash
+kustomize build k8s/overlays/dev
+```
+
 ---
 
 ## CKA Quick Reference
 
 - Components are reusable, optional features. Write them once, turn them on per overlay.
 - An overlay turns components on with `components:`, not `resources:`.
-- Next: [Definitions](definitions.md), [Overlays](overlays.md).
+- Next: [Component kustomization.yaml](kustomization-yaml.md), [Definitions](definitions.md), [Overlays](overlays.md).

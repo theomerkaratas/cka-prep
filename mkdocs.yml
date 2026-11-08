@@ -6,17 +6,16 @@ repo_url: https://github.com/theomerkaratas/cka-prep
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
   favicon: assets/images/kubernetes-favicon.svg
   palette:
-    # Palette toggle for light mode
     - scheme: default
       primary: blue
       accent: blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Palette toggle for dark mode
     - scheme: slate
       primary: blue
       accent: blue
@@ -106,11 +105,11 @@ nav:
               - RBAC: "scheduling/admission-and-access-control/rbac.md"
               - Admission Controller: "scheduling/admission-and-access-control/admission-controller.md"
               - Validating & Mutating Controllers: "scheduling/admission-and-access-control/validating-and-mutating-admission-controllers.md"
-  - Logging & Monitoring:
+  - Monitoring:
         - Cluster Monitoring:
-              - Monitoring Cluster Components: "logging-monitoring/cluster-monitoring/monitoring-cluster-components.md"
+              - Monitoring Cluster Components: "monitoring/cluster-monitoring/monitoring-cluster-components.md"
         - Application Logs:
-              - Managing Application Logs: "logging-monitoring/application-logs/managing-application-logs.md"
+              - Managing Application Logs: "monitoring/application-logs/managing-application-logs.md"
   - ALM:
         - Pod Configuration:
               - Commands and Arguments: "alm/pod-configuration/commands-and-arguments.md"
@@ -127,10 +126,10 @@ nav:
               - HPA: "alm/autoscaling/hpa.md"
               - VPA: "alm/autoscaling/vpa.md"
   - Cluster Maintenance:
-        - OS Upgrade: "cluster-maintenance/os-upgrade.md"
-        - Cluster Upgrade Intro: "cluster-maintenance/cluster-upgrade-intro.md"
-        - Backup and Restore Methods: "cluster-maintenance/backup-and-restore-methods.md"
-        - ETCD with kubeadm: "cluster-maintenance/etcd-with-kubeadm.md"
+        - OS Upgrade: "maintenance/os-upgrade.md"
+        - Cluster Upgrade Intro: "maintenance/cluster-upgrade-intro.md"
+        - Backup and Restore Methods: "maintenance/backup-and-restore-methods.md"
+        - ETCD with kubeadm: "maintenance/etcd-with-kubeadm.md"
   - Security:
         - TLS and Certificates:
               - TLS Intro: "security/tls-and-certificates/tls-intro.md"
@@ -245,6 +244,7 @@ nav:
               - Complex: "kustomize/overlays/complex.md"
         - Components:
               - Intro: "kustomize/components/intro.md"
+              - Component kustomization.yaml: "kustomize/components/kustomization-yaml.md"
               - Definitions: "kustomize/components/definitions.md"
               - Overlays: "kustomize/components/overlays.md"
   - Troubleshooting:
@@ -253,10 +253,3 @@ nav:
         - Control Plane Failure: "troubleshooting/control-plane-failure.md"
         - Worker Plane Failure: "troubleshooting/worker-plane-failure.md"
         - Network Troubleshooting: "troubleshooting/network-troubleshooting.md"
-  - JSON and YAML:
-        - Introduction to YAML: "json-and-yaml/intro.md"
-        - JSONPath:
-            - Introduction: "json-and-yaml/json-path-introduction.md"
-            - Wildcards: "json-and-yaml/json-path-wildcards.md"
-            - Lists: "json-and-yaml/json-path-lists.md"
-            - Kubernetes Use Cases: "json-and-yaml/json-path-kubernetes-use-cases.md"
