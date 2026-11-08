@@ -33,8 +33,9 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.sections
-    - navigation.expand
     - navigation.top
+    - navigation.footer
+    - toc.follow
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -284,8 +285,17 @@ nav:
               - Unknown Node: "troubleshooting/worker-plane/node-unknown.md"
               - Resources: "troubleshooting/worker-plane/resources.md"
               - kubelet: "troubleshooting/worker-plane/kubelet.md"
+              - API Server Endpoint: "troubleshooting/worker-plane/api-server-endpoint.md"
               - kubelet Certificates: "troubleshooting/worker-plane/kubelet-certificates.md"
               - Exam Workflow: "troubleshooting/worker-plane/exam-workflow.md"
         - Network Failure:
-              - Overview: "troubleshooting/network-failure/intro.md"
+              - Overview: "troubleshooting/network/intro.md"
+              - "Step 1: Check the Pods": "troubleshooting/network/pods.md"
+              - "Step 2: Reach the Pods Directly": "troubleshooting/network/direct-pod-access.md"
+              - "Step 3: Service and Endpoints": "troubleshooting/network/service-endpoints.md"
+              - "Step 4: CoreDNS": "troubleshooting/network/coredns.md"
+              - "Step 5: DNS Resolution": "troubleshooting/network/dns-resolution.md"
+              - "Step 6: CNI Plugin": "troubleshooting/network/cni.md"
+              - "Step 7: kube-proxy": "troubleshooting/network/kube-proxy.md"
+              - Exam Workflow: "troubleshooting/network/exam-workflow.md"
         

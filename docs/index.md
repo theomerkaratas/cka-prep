@@ -44,6 +44,7 @@ This knowledge base is organized sequentially into structured, modular topics:
   alias k=kubectl
   export do="--dry-run=client -o yaml"
   ```
+
 - **Kubernetes Documentation:** [Kubernetes Documentation](https://kubernetes.io/)
 - **Kubernetes Tasks:** [Tasks](https://kubernetes.io/docs/tasks/)
 - **More CKA articles:** [Medium CKA tag](https://medium.com/tag/cka)
