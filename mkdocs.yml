@@ -125,7 +125,7 @@ nav:
               - AutoScaling: "alm/autoscaling/autoscaling.md"
               - HPA: "alm/autoscaling/hpa.md"
               - VPA: "alm/autoscaling/vpa.md"
-  - Cluster Maintenance:
+  - Maintenance:
         - OS Upgrade: "maintenance/os-upgrade.md"
         - Cluster Upgrade Intro: "maintenance/cluster-upgrade-intro.md"
         - Backup and Restore Methods: "maintenance/backup-and-restore-methods.md"
@@ -210,10 +210,10 @@ nav:
               - Gateway API: "networking/ingress-and-gateway-api/gateway-api.md"
               - Gateway API CKA Scenarios: "networking/ingress-and-gateway-api/gateway-api-cka-scenarios.md"
               - Ingress vs Gateway API: "networking/ingress-and-gateway-api/ingress-vs-gateway-api.md"
-  - Cluster Design:
-        - Configuring HA: "cluster-design/configuring-ha.md"
-        - etcd in HA: "cluster-design/etcd-in-ha.md"
-        - Introduction to Cluster Setup with kubeadm: "cluster-design/introduction-to-cluster-setup-with-kubeadm.md"
+  - Design:
+        - Configuring HA: "design/configuring-ha.md"
+        - etcd in HA: "design/etcd-in-ha.md"
+        - Introduction to Cluster Setup with kubeadm: "design/introduction-to-cluster-setup-with-kubeadm.md"
   - Helm:
         - Intro: "helm/intro.md"
         - Installation & Configuration: "helm/installation-and-configuration.md"
