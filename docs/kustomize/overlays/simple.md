@@ -2,6 +2,21 @@
 
 - **Official Documentation:** [Kustomize Bases and Overlays](https://kubectl.docs.kubernetes.io/references/kustomize/glossary/#overlay)
 
+## Folder Structure
+
+```text
+k8s/
+├── base/
+│   ├── kustomization.yaml
+│   └── nginx-deployment.yaml
+└── overlays/
+    ├── dev/
+    │   └── kustomization.yaml
+    └── prod/
+        ├── kustomization.yaml
+        └── grafana-deployment.yaml
+```
+
 ## Dev Overlay
 
 Dev uses `replicas: 2`.

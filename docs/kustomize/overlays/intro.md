@@ -61,7 +61,26 @@ resources:
 
 ---
 
----
+## Build, Preview, and Apply an Overlay
+
+Replace `<env_name>` with the overlay directory name, such as `dev` or `prod`.
+Build the overlay with the standalone Kustomize CLI:
+
+```bash
+kustomize build k8s/overlays/<env_name>
+```
+
+Preview the rendered manifests with `kubectl` without applying them:
+
+```bash
+kubectl kustomize k8s/overlays/<env_name>
+```
+
+Apply the overlay to the cluster:
+
+```bash
+kubectl apply -k k8s/overlays/<env_name>
+```
 
 ## CKA Quick Reference
 
