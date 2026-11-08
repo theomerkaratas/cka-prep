@@ -221,12 +221,12 @@ nav:
               - Single Master:
                     - Initialize the Master: "design/installation/single-master-init.md"
                     - Verify the Cluster: "design/installation/single-master-verify.md"
-        - HA:
               - Multiple Masters:
                     - Load Balancer: "design/installation/multi-master-load-balancer.md"
                     - Initialize the First Master: "design/installation/multi-master-init.md"
                     - Join the Other Masters: "design/installation/multi-master-join-control-planes.md"
                     - Verify the HA Cluster: "design/installation/multi-master-verify.md"
+        - HA:
               - Configuring HA: "design/ha/configuring-ha.md"
               - etcd in HA: "design/ha/etcd-in-ha.md"
   - Helm:
