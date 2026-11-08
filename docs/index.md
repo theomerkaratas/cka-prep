@@ -30,7 +30,7 @@ This knowledge base is organized sequentially into structured, modular topics:
 6. **[Security](security/identity-and-access-control/security-primitives.md):** Authentication, TLS/PKI, Certificates API, Kubeconfig, Authorization (Node, RBAC), ServiceAccounts, SecurityContexts, and NetworkPolicies.
 7. **[Storage](storage/storage-fundamentals/intro.md):** Storage drivers, CSI, Volumes, PVs, PVCs, Reclaim policies, and StorageClasses.
 8. **[Networking](networking/foundations/network-layers.md):** Switching/routing, Linux network namespaces, CNI addons, IPAM, Service networking, CoreDNS, Ingress, and Gateway API.
-9. **[Design](design/configuring-ha.md):** High availability planning, infrastructure sizing, and multi-master etcd.
+9. **[Design](design/ha/configuring-ha.md):** High availability planning, infrastructure sizing, and multi-master etcd.
 10. **[Helm](helm/intro.md):** Package management, chart customization, and lifecycle releases.
 11. **[Kustomize](kustomize/introduction/intro.md):** Declarative template-free configuration management, overlays, and transformers.
 12. **[Troubleshooting](troubleshooting/intro.md):** Diagnostic methodology for control plane, workers, applications, and networks.
