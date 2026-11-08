@@ -24,3 +24,6 @@ spec:
     image: myimage
     command: ["sh", "-c", "echo The app is running && sleep 3600"]
 ```
+
+## Further Reading
+- [Init Containers documentation](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)

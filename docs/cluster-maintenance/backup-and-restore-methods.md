@@ -107,3 +107,8 @@ etcdctl snapshot save snapshot.db \
 
 
 > REMEMBER!! In the beginning, execute `export ETCDCTL_API=3`
+
+## Further Reading
+- [Mastering etcd Backup in Kubernetes](https://medium.com/@Ibraheemcisse/mastering-etcd-backup-in-kubernetes-cka-ready-guide-55363642a60c)
+- [Backing up an etcd cluster](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#backing-up-an-etcd-cluster)
+- [etcd recovery guide](https://github.com/etcd-io/website/blob/main/content/en/docs/v3.5/op-guide/recovery.md)

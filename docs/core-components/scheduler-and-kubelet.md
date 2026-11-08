@@ -68,4 +68,8 @@ ps aux | grep kubelet
 grep -i staticpod /var/lib/kubelet/config.yaml
 ```
 
-
+## Further Reading
+- [Scheduling code hierarchy](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-scheduling/scheduling_code_hierarchy_overview.md)
+- [Advanced scheduling in Kubernetes](https://kubernetes.io/blog/2017/03/advanced-scheduling-in-kubernetes)
+- [How does the Kubernetes scheduler work?](https://jvns.ca/blog/2017/07/27/how-does-the-kubernetes-scheduler-work)
+- [How does the Kubernetes scheduler work? (Stack Overflow)](https://stackoverflow.com/questions/28857993/how-does-kubernetes-scheduler-work)

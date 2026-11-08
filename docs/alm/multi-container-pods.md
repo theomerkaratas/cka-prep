@@ -65,4 +65,7 @@ spec:
     command: ['setup-log-shipper.sh']
     restartPolicy: Always # this has to be always, thats why sidecar
 ```
+
+## Further Reading
+- [Sidecar Containers documentation](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/)
   

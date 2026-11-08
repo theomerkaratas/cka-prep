@@ -35,12 +35,12 @@ This knowledge base is organized sequentially into structured, modular topics:
 11. **[Kustomize](kustomize/intro.md):** Declarative template-free configuration management, overlays, and transformers.
 12. **[Troubleshooting](troubleshooting/intro.md):** Diagnostic methodology for control plane, workers, applications, and networks.
 13. **[Other Topics](other-topics/intro.md):** Miscellaneous topics and references.
-14. **[Extra](extra/resources.md):** Additional resources and study materials.
-
 ---
 
 ## Key Exam Tips & Reflexes
 
 - **Speed via Aliases:** Always set up `alias k=kubectl` and export `do="--dry-run=client -o yaml"` at the start of your exam session.
+- **Kubernetes Documentation:** [Kubernetes Documentation](https://kubernetes.io/)
+- **More CKA articles:** [Medium CKA tag](https://medium.com/tag/cka)
 - **Documentation Bookmarks:** Get familiar with standard YAML examples on [kubernetes.io/docs](https://kubernetes.io/docs/).
 - **Explain Over Search:** When in doubt about manifest structure, use `kubectl explain <resource>.<field>` instead of browsing the web.

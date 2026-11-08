@@ -230,3 +230,6 @@ kubectl patch pv pv-vol1 -p '{"spec":{"claimRef": null}}'
 # Step b: Verify PV returns to 'Available' status
 kubectl get pv pv-vol1
 ```
+
+## Further Reading
+- [Persistent Volumes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#claims-as-volumes)

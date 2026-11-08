@@ -100,4 +100,9 @@ volumes:
 
 >We cannot see secret values via `kubectl describe secret secret-name`, but we can see with `kubectl get secret secret-name -o yaml`
 
+> During the exam, use commands like `kubectl create secret --help` to review available options.
 
+## Further Reading
+- Secret Store CSI Driver -> [video](https://www.youtube.com/watch?v=MTnQW9MxnRI)
+- Encrypting Secrets at the `etcd` level -> [KodeKloud lesson](https://learn.kodekloud.com/learn/courses/cka-certification-course-certified-kubernetes-administrator/module/2ddcf79b-abb0-4aeb-ad0c-3d54c7b4fc64/lesson/4abaab5a-b18a-45a4-b969-2f2251a54375)
+- [Encrypt data at rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
