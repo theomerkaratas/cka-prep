@@ -21,6 +21,8 @@ systemctl enable kubelet
 ```bash
 journalctl -u kubelet --no-pager | tail -50
 journalctl -u kubelet -f
+journalctl -u kubelet -n 100 -f
+journalctl -xeu kubelet
 ```
 
 ## Check the Configuration
