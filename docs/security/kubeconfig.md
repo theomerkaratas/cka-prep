@@ -157,7 +157,35 @@ In the CKA exam, always prefer using `kubectl` config subcommands instead of man
 ```sh
 # View the current configuration
 kubectl config view
+```
 
+Example output (certificate data is redacted):
+
+```yaml
+apiVersion: v1
+kind: Config
+current-context: kubernetes-admin@kubernetes
+
+clusters:
+- cluster:
+    certificate-authority-data: REDACTED
+    server: https://172.17.0.5:6443
+  name: kubernetes
+
+contexts:
+- context:
+    cluster: kubernetes
+    user: kubernetes-admin
+  name: kubernetes-admin@kubernetes
+
+users:
+- name: kubernetes-admin
+  user:
+    client-certificate-data: REDACTED
+    client-key-data: REDACTED
+```
+
+```sh
 # if the kubeconfig file in another location
 kubectl config view --kubeconfig=/path/to/file
 
