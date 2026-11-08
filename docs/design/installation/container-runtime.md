@@ -16,6 +16,8 @@ sudo systemctl restart containerd
 sudo systemctl enable containerd
 ```
 
+For more information, see the Kubernetes documentation on [container runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/).
+
 ## Next
 
 Continue with [kubeadm, kubelet, and kubectl](kubeadm-kubelet-kubectl.md).
