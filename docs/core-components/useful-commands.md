@@ -94,3 +94,12 @@ kubectl explain pod.spec.containers
 kubectl explain pod.spec.tolerations --recursive
 ```
 
+---
+
+## 6. Verifying Resources
+
+After creating or changing a resource, verify that it matches the requirements. For example, inspect a Pod's image and status with:
+
+```bash
+kubectl describe pod <pod-name>
+```

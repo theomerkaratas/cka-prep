@@ -120,5 +120,6 @@ Note: Before you can perform this upgrade, you have to update kubeadm to v1.13.4
 
 if we setup our cluster in hard way, we should setup by ourselves
 
-`kubeadm upgrade` -> https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-upgrade/
-how to upgrade with `kubeadm` -> https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
+## Further Reading
+- [`kubeadm upgrade` command reference](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-upgrade/)
+- [Upgrade a kubeadm cluster](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)
