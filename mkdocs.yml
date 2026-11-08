@@ -263,8 +263,29 @@ nav:
               - Definitions: "kustomize/components/definitions.md"
               - Overlays: "kustomize/components/overlays.md"
   - Troubleshooting:
-        - Intro: "troubleshooting/intro.md"
-        - Application Failure: "troubleshooting/application-failure.md"
-        - Control Plane Failure: "troubleshooting/control-plane-failure.md"
-        - Worker Plane Failure: "troubleshooting/worker-plane-failure.md"
-        - Network Troubleshooting: "troubleshooting/network-troubleshooting.md"
+        - Application Failure:
+              - Overview: "troubleshooting/application/intro.md"
+              - Triage Commands: "troubleshooting/application/triage-commands.md"
+              - Common Failures: "troubleshooting/application/common-failures.md"
+              - Exam Workflow: "troubleshooting/application/exam-workflow.md"
+        - Control Plane Failure:
+              - Components: "troubleshooting/control-plane/components.md"
+              - Triage Flow: "troubleshooting/control-plane/triage-flow.md"
+              - Node and Pod Status: "troubleshooting/control-plane/node-and-pod-status.md"
+              - Service Status: "troubleshooting/control-plane/service-status.md"
+              - Logs: "troubleshooting/control-plane/logs.md"
+              - API Down with crictl: "troubleshooting/control-plane/api-down-with-crictl.md"
+              - Certs and etcd: "troubleshooting/control-plane/certs-and-etcd.md"
+              - Common Failures: "troubleshooting/control-plane/common-failures.md"
+              - Exam Workflow: "troubleshooting/control-plane/exam-workflow.md"
+        - Worker Plane Failure:
+              - Overview: "troubleshooting/worker-plane/intro.md"
+              - Node Status: "troubleshooting/worker-plane/node-status.md"
+              - Unknown Node: "troubleshooting/worker-plane/node-unknown.md"
+              - Resources: "troubleshooting/worker-plane/resources.md"
+              - kubelet: "troubleshooting/worker-plane/kubelet.md"
+              - kubelet Certificates: "troubleshooting/worker-plane/kubelet-certificates.md"
+              - Exam Workflow: "troubleshooting/worker-plane/exam-workflow.md"
+        - Network Failure:
+              - Overview: "troubleshooting/network-failure/intro.md"
+        

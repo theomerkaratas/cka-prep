@@ -4,8 +4,26 @@ A normal network connection between the nodes is not enough. Kubernetes needs a 
 
 Apply the manifest for the add-on you chose. Run this on the first control plane node:
 
+Download it with a name you choose (`-o`):
+
 ```bash
-kubectl apply -f <CNI_MANIFEST_URL_OR_FILE>
+curl -fL -o manifest.yaml "https://raw.githubusercontent.com/OWNER/REPO/BRANCH/PATH/FILE.yaml"
+kubectl apply -f manifest.yaml
+```
+
+Or let `curl` use the filename from the URL (`-O`, uppercase letter O):
+
+```bash
+curl -fLO "https://raw.githubusercontent.com/OWNER/REPO/BRANCH/PATH/FILE.yaml"
+kubectl apply -f FILE.yaml
+```
+
+Replace the URL placeholders with the GitHub repository, branch, and YAML file path. In both commands, `-f` makes curl fail on HTTP error responses and `-L` follows redirects.
+
+Or skip downloading the file and apply the manifest directly from its URL:
+
+```bash
+kubectl apply -f "https://raw.githubusercontent.com/OWNER/REPO/BRANCH/PATH/FILE.yaml"
 ```
 
 Calico is used in some examples, but it is not the only option. Other pod network add-ons, such as Flannel or Cilium, can also be used. Choose one that fits your cluster and follow its installation requirements; use only one pod network add-on per cluster. Set `--pod-network-cidr` in `kubeadm init` to the value your chosen add-on expects.
