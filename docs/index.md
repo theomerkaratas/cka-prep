@@ -23,13 +23,13 @@ The Certified Kubernetes Administrator (CKA) exam tests practical, performance-b
 This knowledge base is organized sequentially into structured, modular topics:
 
 1. **[Core Components](core-components/etcd.md):** `etcd`, `kube-apiserver`, `kube-controller-manager`, `kube-scheduler`, `kubelet`, `kube-proxy`, and essential CLI commands.
-2. **[Scheduling](scheduling/manuel-scheduling.md):** Manual scheduling, labels & selectors, taints & tolerations, node affinity, static pods, and multiple schedulers.
-3. **[Logging & Monitoring](logging-monitoring/monitoring-cluster-components.md):** Metrics Server (`cAdvisor`), `kubectl top`, and container log management.
-4. **[Application Lifecycle Management](alm/rolling-updates-and-rollbacks.md):** Rolling updates, rollbacks, commands/args, ConfigMaps, Secrets, init containers, and autoscaling (HPA/VPA).
+2. **[Scheduling](scheduling/pod-placement/manuel-scheduling.md):** Manual scheduling, labels & selectors, taints & tolerations, node affinity, static pods, and multiple schedulers.
+3. **[Logging & Monitoring](logging-monitoring/cluster-monitoring/monitoring-cluster-components.md):** Metrics Server (`cAdvisor`), `kubectl top`, and container log management.
+4. **[Application Lifecycle Management](alm/workload-lifecycle/rolling-updates-and-rollbacks.md):** Rolling updates, rollbacks, commands/args, ConfigMaps, Secrets, init containers, and autoscaling (HPA/VPA).
 5. **[Cluster Maintenance](cluster-maintenance/os-upgrade.md):** Node drain/cordon, OS upgrades, cluster version upgrades with `kubeadm`, and `etcd` backup & restore.
-6. **[Security](security/security-primitives.md):** Authentication, TLS/PKI, Certificates API, Kubeconfig, Authorization (Node, RBAC), ServiceAccounts, SecurityContexts, and NetworkPolicies.
-7. **[Storage](storage/intro.md):** Storage drivers, CSI, Volumes, PVs, PVCs, Reclaim policies, and StorageClasses.
-8. **[Networking](networking/network-layers.md):** Switching/routing, Linux network namespaces, CNI addons, IPAM, Service networking, CoreDNS, Ingress, and Gateway API.
+6. **[Security](security/identity-and-access-control/security-primitives.md):** Authentication, TLS/PKI, Certificates API, Kubeconfig, Authorization (Node, RBAC), ServiceAccounts, SecurityContexts, and NetworkPolicies.
+7. **[Storage](storage/storage-fundamentals/intro.md):** Storage drivers, CSI, Volumes, PVs, PVCs, Reclaim policies, and StorageClasses.
+8. **[Networking](networking/foundations/network-layers.md):** Switching/routing, Linux network namespaces, CNI addons, IPAM, Service networking, CoreDNS, Ingress, and Gateway API.
 9. **[Cluster Design](cluster-design/configuring-ha.md):** High availability planning, infrastructure sizing, and multi-master etcd.
 10. **[Helm](helm/intro.md):** Package management, chart customization, and lifecycle releases.
 11. **[Kustomize](kustomize/introduction/intro.md):** Declarative template-free configuration management, overlays, and transformers.
